@@ -2,7 +2,7 @@
     "name": "osmscripts/osm-creator",
     "autoload": {
         "psr-4": {
-            "Osmscripts\\OsmCreator\\": "src/"
+            "Osmscripts\\Osm\\": "src/"
         }
     },
     "require": {

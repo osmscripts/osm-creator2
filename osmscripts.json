@@ -1,0 +1,14 @@
+{
+    "osm": {
+        "commands": {
+            "create:module": "OsmScripts\\Osm\\Commands\\CreateModule",
+            "create:package": "OsmScripts\\Osm\\Commands\\CreatePackage",
+            "create:command": "OsmScripts\\Osm\\Commands\\CreateCommand",
+            "create:page": "OsmScripts\\Osm\\Commands\\CreatePage",
+            "create:route": "OsmScripts\\Osm\\Commands\\CreateRoute",
+            "translate": "OsmScripts\\Osm\\Commands\\Translate",
+            "in": "OsmScripts\\Osm\\Commands\\In",
+            "create:mustache": "OsmScripts\\Osm\\Commands\\CreateMustache"
+        }
+    }
+}
