@@ -20,9 +20,6 @@ class CreateMustache extends RouteCommand
 {
     #region Properties
     public function default($property) {
-        /* @var Script $script */
-        global $script;
-
         switch ($property) {
             case 'route_method': return 'GET';
             case 'public': return true;
