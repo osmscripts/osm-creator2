@@ -19,7 +19,8 @@ class Translate extends ModuleCommand
     public function default($property) {
         switch ($property) {
             case 'string': return $this->input->getArgument('string');
-            case 'quoted_string': return '"' .  addslashes($this->string) . '"';
+            case 'quoted_string': return '"' .
+                str_replace("\\'", "'", addslashes($this->string)) . '"';
         }
 
         return parent::default($property);
