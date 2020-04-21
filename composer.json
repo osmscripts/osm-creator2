@@ -15,6 +15,6 @@
     },
     "require": {
         "php": "^7.2",
-        "osmscripts/core": "dev-master"
+        "osmscripts/core": "v1.x-dev"
     }
 }
