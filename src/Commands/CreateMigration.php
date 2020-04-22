@@ -31,10 +31,11 @@ class CreateMigration extends ModuleCommand
         switch ($property) {
             case 'migration': return $this->input->getArgument('migration');
             case 'step': return $this->input->getOption('step');
-            case 'dir': return "migrations/{$this->step}";
+            case 'dir': return "Migrations/{$this->step}";
             case 'index': return $this->getIndex();
-            case 'filename': return "{$this->dir}/{$this->index}_{$this->migration}.php";
-            case 'class': return "{$this->module_->namespace}\\Migrations\\{$this->getClass()}";
+            case 'filename': return "{$this->dir}/m{$this->index}_{$this->migration}.php";
+            case 'class': return "{$this->module_->namespace}\\Migrations\\" .
+                "{$this->step}\\m{$this->index}_{$this->migration}";
             case 'class_': return new Class_(['name' => $this->class, 'module' => $this->module_]);
         }
 
@@ -57,7 +58,7 @@ class CreateMigration extends ModuleCommand
                 continue;
             }
 
-            if (!preg_match('/^(?<index>\d+)_.*$/',
+            if (!preg_match('/^m(?<index>\d+)_.*$/',
                 $fileInfo->getFilename(), $match))
             {
                 continue;
@@ -71,11 +72,6 @@ class CreateMigration extends ModuleCommand
 
         return sprintf('%02d', $result + 1);
     }
-
-    protected function getClass() {
-        return $this->str->studly($this->step) . '\\' .
-            $this->str->studly($this->migration);
-    }
     #endregion
 
     protected function configure() {
@@ -84,7 +80,7 @@ class CreateMigration extends ModuleCommand
             ->setDescription("Creates new migration script")
             ->addArgument('migration', InputArgument::REQUIRED, "Name of the migration script. Should be snake_case.")
             ->addOption('step', null, InputOption::VALUE_REQUIRED,
-                "Migration step", 'schema');
+                "Migration step", 'Schema');
     }
 
     protected function handle() {
