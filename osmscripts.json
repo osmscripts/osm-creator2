@@ -9,7 +9,8 @@
             "translate": "OsmScripts\\Osm\\Commands\\Translate",
             "in": "OsmScripts\\Osm\\Commands\\In",
             "create:mustache": "OsmScripts\\Osm\\Commands\\CreateMustache",
-            "create:dialog": "OsmScripts\\Osm\\Commands\\CreateDialog"
+            "create:dialog": "OsmScripts\\Osm\\Commands\\CreateDialog",
+            "create:migration": "OsmScripts\\Osm\\Commands\\CreateMigration"
         }
     }
 }
