@@ -5,9 +5,8 @@
 
     public function <?php echo $method ?>() {
         return osm_layout('<?php echo $layer ?>', [
-            '#page' => [
-                'title' => osm_t("[page title]"),
-            ],
+            '#page.title' => osm_t("[page title]"),
+
             // bind data to views
         ]);
     }

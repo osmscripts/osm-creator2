@@ -5,17 +5,10 @@
 <?php echo '<?php' ?>
 
 
-use Osm\Framework\Views\Views\Container;
-
 return [
     '@include' => ['page'],
-    '#page' => [
-        'modifier' => '<?php echo $css_modifier ?>',
-        'content' => Container::new([
-            'id' => 'content',
-            'views' => [
-                // add page-specific views here
-            ],
-        ]),
+    '#page.modifier' => '<?php echo $css_modifier ?>',
+    '#content.views' => [
+        // add page-specific views here
     ],
 ];
