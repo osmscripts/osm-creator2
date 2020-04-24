@@ -8,7 +8,7 @@
 return [
     '@include' => ['page'],
     '#page.modifier' => '<?php echo $css_modifier ?>',
-    '#content.views' => [
+    '#content.items' => [
         // add page-specific views here
     ],
 ];

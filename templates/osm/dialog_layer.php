@@ -14,11 +14,11 @@ return [
     '#dialog' => [
         'modifier' => '<?php echo $css_modifier ?>',
         'header' => osm_t("{dialog_title}"),
-        'views' => [
+        'items' => [
             'form' => Form::new([
                 'route' => 'POST {form_route}',
                 'submitting_message' => osm_t("{submitting_message}"),
-                'views' => [
+                'items' => [
                     // add input fields here
                 ],
             ]),
