@@ -1,5 +1,5 @@
 {
-    "name": "osmscripts/osm-creator",
+    "name": "osmscripts/osm-creator2",
     "description": "Osm project code generation shell commands",
     "license": "GPL-3.0-only",
     "authors": [
@@ -14,7 +14,7 @@
         }
     },
     "require": {
-        "php": "^7.2",
-        "osmscripts/core": "v1.x-dev"
+        "php": ">=7.3",
+        "osmscripts/core": "^0.1"
     }
 }
