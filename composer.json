@@ -15,6 +15,6 @@
     },
     "require": {
         "php": ">=7.3",
-        "osmscripts/core": "^0.1"
+        "osmscripts/core2": "^0.1"
     }
 }
